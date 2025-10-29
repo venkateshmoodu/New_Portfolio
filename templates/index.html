@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venkatesh Moodu | Aspiring Software Engineer</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Galaxy Canvas Background -->
+    <canvas id="galaxy-canvas"></canvas>
+
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">Moodu Venkatesh</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content container">
+                <h1 class="hero-title reveal-text">
+                    Hi, I'm <span class="highlight">Moodu Venkatesh</span>
+                </h1>
+                <p class="hero-subtitle reveal-text-delay-1">AI & ML Developer | Python Developer | Tech Enthusiast | Frontend Dev  </p>
+                <p class="hero-description reveal-text-delay-2">
+                    Passionate about building scalable software solutions and eager to contribute to technology-driven innovation.
+                </p>
+                <div class="hero-buttons reveal-text-delay-3">
+                    <a href="{{ url_for('static', filename='assets/VENKATESHH_RESUME1.pdf') }}" target="_blank" class="btn btn-primary btn-glow">
+                        <i class="fas fa-download"></i> View Resume
+                    </a>
+                    <a href="#contact" class="btn btn-secondary btn-glow">
+                        <i class="fas fa-paper-plane"></i> Contact Me
+                    </a>
+                </div>
+                <div class="hero-socials reveal-text-delay-4">
+                    <a href="https://github.com/venkateshmoodu" target="_blank" aria-label="GitHub" class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/moodu-venkatesh-9a5798223" target="_blank" aria-label="LinkedIn" class="social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:venkateshmudu89@gmail.com" aria-label="Email" class="social-icon">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container reveal">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            Hello! I'm a passionate and driven B.Tech Computer Science graduate from VBIT with a specialization in <strong>Artificial Intelligence & Machine Learning</strong>. My goal is to become a software engineer with strong programming skills, building scalable and innovative software solutions.
+                        </p>
+                        <p>
+                            I have hands-on project experience in both <strong>AI/ML and web development</strong>, with a strong command of Python, SQL, and modern frameworks. I'm a quick learner, familiar with the full Software Development Life Cycle (SDLC), and I'm actively seeking challenging opportunities to contribute to a technology-driven team.
+                        </p>
+                    </div>
+                    <div class="about-details">
+                        <p><strong><i class="fas fa-user"></i> Name:</strong> Moodu Venkatesh</p>
+                        <p><strong><i class="fas fa-graduation-cap"></i> Education:</strong> B.Tech, CSE (AI & ML), VBIT</p>
+                        <p><strong><i class="fas fa-envelope"></i> Email:</strong> venkateshmudu89@gmail.com</p>
+                        <p><strong><i class="fas fa-phone"></i> Phone:</strong> +91 6302815792</p>
+                        <p><strong><i class="fas fa-palette"></i> Interests:</strong> AI/ML, Software Development, Reading Books, Sport's</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills" id="skills">
+            <div class="container reveal">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Programming & Databases</h3>
+                        <div class="skills-list">
+                            <span class="skill-pill">Python</span>
+                            <span class="skill-pill">SQL</span>
+                            <span class="skill-pill">JAVA</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>AI & Data Science</h3>
+                        <div class="skills-list">
+                            <span class="skill-pill">Machine Learning</span>
+                            <span class="skill-pill">Deep Learning</span>
+                            <span class="skill-pill">Generative AI</span>
+                            <span class="skill-pill">CNN</span>
+                            <span class="skill-pill">LSTM</span>
+                            <span class="skill-pill">YOLO</span>
+                            <span class="skill-pill">Pandas</span>
+                            <span class="skill-pill">NumPy</span>
+                            <span class="skill-pill">Matplotlib</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Web & Frameworks</h3>
+                        <div class="skills-list">
+                            <span class="skill-pill">HTML</span>
+                            <span class="skill-pill">CSS</span>
+                            <span class="skill-pill">Flask</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools, Methods & Platforms</h3>
+                        <div class="skills-list">
+                            <span class="skill-pill">Git</span>
+                            <span class="skill-pill">GitHub</span>
+                            <span class="skill-pill">VS Code</span>
+                            <span class="skill-pill">Jupyter Notebook</span>
+                            <span class="skill-pill">SDLC - Agile Model</span>
+                            <span class="skill-pill">Salesforce Platform</span>
+                            <span class="skill-pill">MS Office</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <div class="container reveal">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Food Delivery Time Prediction using Machine Learning</h3>
+                        <p>Built a machine learning model to accurately estimate food delivery times. Deployed as an interactive web app using Flask.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>Machine Learning</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/venkateshmoodu" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>Image Processing Web App: Cartoonify and Sketchify</h3>
+                        <p>A Python-based web app that converts user-uploaded photos into cartoon and sketch styles using OpenCV for image manipulation.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>OpenCV</span>
+                            <span>HTML/CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/venkateshmoodu" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience" id="experience">
+            <div class="container reveal">
+                <h2 class="section-title">Experience & Responsibilities</h2>
+                <div class="experience-grid">
+                    <div class="experience-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-laptop-code"></i> Virtual Internships
+                        </h3>
+                        <div class="experience-cards">
+                            <div class="exp-card">
+                                <div class="exp-header">
+                                    <div class="exp-icon">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <div class="exp-title-section">
+                                        <h4>
+                                            <a href="{{ url_for('static', filename='assets/google_genai_cert.pdf') }}" target="_blank">
+                                                Generative AI Virtual Internship
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </h4>
+                                        <p class="exp-company">Google Cloud</p>
+                                    </div>
+                                </div>
+                                <p class="exp-date">
+                                    <i class="far fa-calendar-alt"></i> July 2024 - September 2024
+                                </p>
+                                <p class="exp-description">
+                                    Developed and deployed generative models; practiced advanced prompt engineering techniques.
+                                </p>
+                                <div class="exp-tags">
+                                    <span class="exp-tag">Generative AI</span>
+                                    <span class="exp-tag">Prompt Engineering</span>
+                                </div>
+                            </div>
+
+                            <div class="exp-card">
+                                <div class="exp-header">
+                                    <div class="exp-icon">
+                                        <i class="fas fa-cloud"></i>
+                                    </div>
+                                    <div class="exp-title-section">
+                                        <h4>
+                                            <a href="{{ url_for('static', filename='assets/salesforce_dev_cert.pdf') }}" target="_blank">
+                                                Salesforce Developer Virtual Internship
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </h4>
+                                        <p class="exp-company">Salesforce</p>
+                                    </div>
+                                </div>
+                                <p class="exp-date">
+                                    <i class="far fa-calendar-alt"></i> October 2023 - November 2023
+                                </p>
+                                <p class="exp-description">
+                                    Customized Salesforce applications and actively contributed to developing CRM solutions.
+                                </p>
+                                <div class="exp-tags">
+                                    <span class="exp-tag">CRM Development</span>
+                                    <span class="exp-tag">Salesforce</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-users"></i> Leadership & Community
+                        </h3>
+                        <div class="experience-cards">
+                            <div class="exp-card">
+                                <div class="exp-header">
+                                    <div class="exp-icon">
+                                        <i class="fab fa-google"></i>
+                                    </div>
+                                    <div class="exp-title-section">
+                                        <h4>Google Crowdsource Club Member</h4>
+                                        <p class="exp-company">VBIT Campus</p>
+                                    </div>
+                                </div>
+                                <p class="exp-date">
+                                    <i class="fas fa-map-marker-alt"></i> Campus Initiative
+                                </p>
+                                <p class="exp-description">
+                                    Organized tech events and collaborative projects. Collaborated with peers to promote AI awareness and community participation.
+                                </p>
+                                <div class="exp-tags">
+                                    <span class="exp-tag">Event Management</span>
+                                    <span class="exp-tag">AI Advocacy</span>
+                                </div>
+                            </div>
+
+                            <div class="exp-card">
+                                <div class="exp-header">
+                                    <div class="exp-icon">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                    <div class="exp-title-section">
+                                        <h4>Art of Living Volunteer</h4>
+                                        <p class="exp-company">Community Role</p>
+                                    </div>
+                                </div>
+                                <p class="exp-date">
+                                    <i class="fas fa-hands-helping"></i> Volunteer Work
+                                </p>
+                                <p class="exp-description">
+                                    Supported community development programs and assisted in coordinating workshops on mindfulness and personal development.
+                                </p>
+                                <div class="exp-tags">
+                                    <span class="exp-tag">Community Service</span>
+                                    <span class="exp-tag">Workshop Coordination</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="certifications" id="certifications">
+            <div class="container reveal">
+                <h2 class="section-title">Certifications & Achievements</h2>
+                <p class="cert-intro">
+                    I am committed to continuous learning and have earned several industry-recognized certifications and virtual experience badges, including:
+                </p>
+                <div class="cert-logos">
+                    <a href="{{ url_for('static', filename='assets/jp_morgan_cert.pdf') }}" target="_blank" class="cert-logo">
+                        J.P. Morgan
+                    </a>
+                    <a href="{{ url_for('static', filename='assets/accenture_cert.pdf') }}" target="_blank" class="cert-logo">
+                        Accenture
+                    </a>
+                    <a href="{{ url_for('static', filename='assets/tata_cert.pdf') }}" target="_blank" class="cert-logo">
+                        TATA
+                    </a>
+                    <a href="https://media.licdn.com/dms/image/v2/D5622AQHgT9I9VT2SPA/feedshare-shrink_1280/feedshare-shrink_1280/0/1702641572535?e=1762992000&v=beta&t=ip5OeiIseKN4EYs2466w9CVq2FzmjOO65kvPk5U8JTg" target="_blank" class="cert-logo">
+                        Microsoft and LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container reveal">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="contact-subtitle">
+                    I'm currently open to new opportunities and collaborations.
+                    Feel free to send me a message!
+                </p>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+                <div id="form-message"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-socials">
+                <a href="https://github.com/venkateshmoodu" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/moodu-venkatesh-9a5798223" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:venkateshmudu89@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+916302815792" aria-label="Phone"><i class="fas fa-phone"></i></a>
+            </div>
+            <p class="footer-copyright">
+                &copy; 2025 Moodu Venkatesh. All rights reserved.
+            </p>
+            <p class="footer-design">
+                Designed & Built with <i class="fas fa-heart"></i> and Flask.
+            </p>
+        </div>
+    </footer>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#skills" class="mobile-nav-link">Skills</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="#experience" class="mobile-nav-link">Experience</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
