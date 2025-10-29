@@ -4,6 +4,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from datetime import datetime
 import re
+import os
 
 # Import DNS library for email validation
 try:
@@ -20,12 +21,17 @@ app = Flask(__name__)
 # EMAIL CONFIGURATION
 # ========================================
 
-SENDER_EMAIL = 'mooduvenkatesh.nielit@gmail.com'
-SENDER_PASSWORD = 'lcypqqkyxtcjuxbq'
-RECIPIENT_EMAIL = 'venkatchouhan24@gmail.com'
-
-SMTP_SERVER = 'smtp.gmail.com'
-SMTP_PORT = 587
+# Import configuration from config.py
+try:
+    from config import SENDER_EMAIL, SENDER_PASSWORD, RECIPIENT_EMAIL, SMTP_SERVER, SMTP_PORT
+except ImportError:
+    # Fallback to environment variables if config.py doesn't exist
+    import os
+    SENDER_EMAIL = os.getenv('SENDER_EMAIL')
+    SENDER_PASSWORD = os.getenv('SENDER_PASSWORD')
+    RECIPIENT_EMAIL = os.getenv('RECIPIENT_EMAIL')
+    SMTP_SERVER = 'smtp.gmail.com'
+    SMTP_PORT = 587
 
 # Validation settings
 ENABLE_STRICT_EMAIL_VALIDATION = True  # Must be True to block invalid emails

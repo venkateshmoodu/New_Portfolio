@@ -1,0 +1,11 @@
+(
+echo services:
+echo   - type: web
+echo     name: venkatesh-portfolio
+echo     env: python
+echo     buildCommand: "pip install -r requirements.txt"
+echo     startCommand: "gunicorn app:app"
+echo     envVars:
+echo       - key: PYTHON_VERSION
+echo         value: 3.11.0
+) > render.yaml
