@@ -26,7 +26,6 @@ try:
     from config import SENDER_EMAIL, SENDER_PASSWORD, RECIPIENT_EMAIL, SMTP_SERVER, SMTP_PORT
 except ImportError:
     # Fallback to environment variables if config.py doesn't exist
-    import os
     SENDER_EMAIL = os.getenv('SENDER_EMAIL')
     SENDER_PASSWORD = os.getenv('SENDER_PASSWORD')
     RECIPIENT_EMAIL = os.getenv('RECIPIENT_EMAIL')
@@ -113,8 +112,8 @@ def validate_email_complete(email):
     
     # Step 2: Check if email actually exists
     if not DNS_AVAILABLE:
-        print(f"   ❌ REJECTED: DNS library not available\n")
-        return False, "Email validation unavailable. Please contact administrator."
+        print(f"   ⚠️ WARNING: DNS library not available - accepting anyway\n")
+        return True, "Email accepted (validation unavailable)"
     
     if not ENABLE_STRICT_EMAIL_VALIDATION:
         print(f"   ⚠️ WARNING: Strict validation disabled - accepting without verification\n")
@@ -400,7 +399,7 @@ def test_email():
     """Test endpoint - Use real email for testing"""
     test_data = {
         'name': 'Test User',
-        'email': 'venkatchouhan24@gmail.com',  # Use your real email for testing
+        'email': 'venkatchouhan24@gmail.com',
         'message': 'This is a test message. If you receive this, the system is working!',
         'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
         'ip_address': '127.0.0.1'
@@ -415,7 +414,7 @@ def test_email():
     })
 
 # ========================================
-# STARTUP
+# STARTUP - FIXED FOR RENDER DEPLOYMENT
 # ========================================
 
 if __name__ == '__main__':
@@ -432,9 +431,14 @@ if __name__ == '__main__':
     
     if not DNS_AVAILABLE:
         print("\n⚠️  CRITICAL WARNING: dnspython NOT installed!")
-        print("   Email validation will NOT work - ALL emails will be rejected!")
+        print("   Email validation will NOT work properly!")
         print("   Install now: pip install dnspython\n")
     else:
         print("\n✅ All systems ready! DNS validation is ACTIVE.\n")
     
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    # Get port from environment variable (Render sets this) or use 5000 for local
+    port = int(os.environ.get('PORT', 5000))
+    
+    # Run the app
+    # debug=False for production, host='0.0.0.0' to accept external connections
+    app.run(debug=False, host='0.0.0.0', port=port)
