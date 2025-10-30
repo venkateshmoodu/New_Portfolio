@@ -437,8 +437,8 @@ if __name__ == '__main__':
         print("\n✅ All systems ready! DNS validation is ACTIVE.\n")
     
     # Get port from environment variable (Render sets this) or use 5000 for local
-    port = int(os.environ.get('PORT', 5000))
+    port = int(os.environ.get('PORT', 8000))
     
     # Run the app
     # debug=False for production, host='0.0.0.0' to accept external connections
-    app.run(debug=False, host='0.0.0.0', port=port)
+    app.run(host='0.0.0.0', port=port, debug=False)
